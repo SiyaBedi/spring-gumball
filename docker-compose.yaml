@@ -16,7 +16,7 @@ services:
     depends_on:
     - gumball
     ports:
-    - "80:5000"
+    - "81:5000"
     - "1936:1936"
     environment:
       BACKENDS: "gumball"
