@@ -44,5 +44,9 @@
 ![proof of success](images/proof-of-success.png)
 
 
+### Issues faced:
 
+I first uploaded the entire spring-gumball as a folder into the repo and the gradle.yaml would get created alongside the folder. This caused several build errors. Finally, I decided to upload all the contents of the folder into the repo and them create a workflow and that worked successfully. 
+
+Another error that I faced was trying to figure out what kind of access to give to the service account to my project in the "Grant this service account access to project (optional)" section. I tried the "Owner" role and that seemed to give the service account sufficient access to my project to get things done ahead.
 
