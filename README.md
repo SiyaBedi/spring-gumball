@@ -2,45 +2,47 @@
 
 ## CI Workflow (Part 1)
 
-Navigated to "Actions" and created a new workflow:
+### Navigated to "Actions" and created a new workflow:
 ![CI-1](images/CI-Workflow-2.png)
 
-I made a commit to the docker-compose.yaml to trigger the action
-![CI-2](images/CI-Workflow-1.png)
+### I made a commit to the docker-compose.yaml to trigger the action
+![CI-2](images/CI-workflow-1.png)
 
 ## CD Workflow (Part 2)
 
-1. Create a new "Build and Deploy to GKE" workflow:
-![pre create CD, home page of new workflow](images/github-preCreateCD.png)
+### GCP Service Accoucnt & JSON Service Account Key
+![servicee-account](images/service-account.png)
+![service-account-key](images/service-account-key.png)
 
-2. Setup GKE by creating an IAM & Admin Service Account with Owner permissions:
-![create IAM & Admin Service Account (SA)](images/gke-createSA.png)
+### GitHub Action Secrets
+![github-action-secrets](images/github-action-secrets.png)
 
-3. Create a JSON Service Account Key. Then for macOS view the key using a base64 encoding:
-![Create JSON SA Key](images/gke-createSAKey.png)
-![Contents of key](images/gke-keyInfo.png)
-![base 64 encoding](images/github-SAKEYBase64.png)
+## Trigger a CD Deployment by creating a new GitHub Release
 
-4. Set the Project ID as GKE_PROJECT and base64 encoded key as GKE_SA_KEY:
-![show secrets](images/github-showSecrets.png)
+### Created cluster
+![cluster](images/create-cluster.png)
 
-5. Create a GKE Cluster:
-![create cluster](images/gke-createCluster.png)
+### Create Release
+![release](images/create-release.png)
 
-6. Trigger a CD by creating a release: 
-![create release](images/github-createRelease.png)
-![trigger home](images/github-releaseTrigger.png)
-![trigger overview](images/github-releaseTriggerOverview.png)
-![trigger start](images/github-releaseTriggerStart.png)
-![trigger end](images/github-releaseTriggerEnd.png)
+### Release success
+![release-success](images/release-success.png)
 
-7. Verify the CD was successful by checking GKE Workload and Service:
-![gke workload](images/gke-workload.png)
-![gke service](images/gke-service.png)
+### Workload
+![workload](images/workloads.png)
 
-8. Create a Load Balancer Ingress:
-![gke create ingress](images/gke-createIngress.png)
-![gke ingress created](images/gke-ingressCreated.png)
+### Services
+![services](images/services.png)
 
-9. Check that the app works:
-![check app works](images/gke-proofOfSuccess.png)
+### Creating Ingress
+![create-ingress](images/creating-ingress.png)
+
+### Successful Ingress
+![successful-ingress](images/successful-ingress.png)
+
+### Proof of success
+![proof of success](images/proof-of-success.png)
+
+
+
+
